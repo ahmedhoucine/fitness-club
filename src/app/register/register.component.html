@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row justify-content-center register-container">
+        <div class="col-md-6">
+            <form class="register-form"  #registerformulaire="ngForm" >
+                <h2 class="text-center mb-4">Register</h2>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required #firstnameinput="ngModel"  ngModel name="firstName">
+                    <div *ngIf="firstnameinput.invalid && firstnameinput.touched" class="text-danger">First Name is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required #lastnameinput="ngModel" ngModel name="lastName">
+                    <div *ngIf="lastnameinput.invalid && lastnameinput.touched" class="text-danger">Last Name is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" id="age" max="100" placeholder="Enter your age" required #ageinput="ngModel" ngModel name="age">
+                    <div *ngIf="ageinput.invalid && ageinput.touched"   class="text-danger">Age is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number" [maxLength]="8" #numberinput="ngModel"  required ngModel name="number">
+                    <div *ngIf="numberinput.invalid && numberinput.touched" class="text-danger">Phone Number is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="cinNumber">CIN Number</label>
+                    <input type="text" class="form-control" id="cinNumber" placeholder="Enter your CIN number" required #cinnumberinput="ngModel" ngModel name="cinNumber">
+                    <div *ngIf="cinnumberinput.invalid && cinnumberinput.touched" class="text-danger">CIN Number is required</div>
+                </div>
+                <div class="sizes mt-5">
+                    <h6 class="text-uppercase">Sport</h6>
+                    <label class="radio">
+                        <input type="radio" name="sport" value="bodybuilding" checked required ngModel name="sport">
+                        <span>Bodybuilding</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="sport" value="cardio" required ngModel name="sport">
+                        <span>Cardio</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="sport" value="equitation" required ngModel name="sport">
+                        <span>Equitation</span>
+                    </label>
+                    <div *ngIf="registerformulaire.value.sport.invalid" class="text-danger">Sport is required</div>
+                </div>
+                <div class="sizes mt-5">
+                    <h6 class="text-uppercase">Duration</h6>
+                    <label class="radio">
+                        <input type="radio" name="duration" value="1" checked required ngModel name="duration">
+                        <span>1 month</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="duration" value="3" required ngModel name="duration">
+                        <span>3 months</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="duration" value="6" required ngModel name="duration">
+                        <span>6 months</span>
+                    </label>
+                    <div *ngIf="registerformulaire.value.duration.invalid" class="text-danger">Duration is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="usertName">userName</label>
+                    <input type="text" class="form-control" id="userName" placeholder="Enter your username" required #usernameinput="ngModel"  ngModel name="usertName">
+                    <div *ngIf="usernameinput.invalid && usernameinput.touched" class="text-danger">userName is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="password">password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required #passwordinput="ngModel"  ngModel name="password">
+                    <div *ngIf="passwordinput.invalid && passwordinput.touched" class="text-danger">password is required</div>
+                </div>
+                <button type="submit" [disabled]="registerformulaire.invalid" (click)="registrationdone(registerformulaire)" class="btn btn-primary "
+                   >Register</button>
+            </form>
+        </div>
+    </div>
+</div>

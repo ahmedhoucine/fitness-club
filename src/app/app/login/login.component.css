@@ -1,0 +1,45 @@
+/* login.component.css */
+
+body {
+    background-color: #ffc107; /* Yellow background */
+    color: #000; /* Black text color */
+}
+
+.login-container {
+    margin-top: 5%;
+}
+
+.login-form {
+    background-color: #ffc107; /* Yellow background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-form label {
+    color: #000; /* Black text color */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    background-color: #fff; /* White background */
+    border: 1px solid #000; /* Black border */
+    color: #000; /* Black text color */
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    background-color: #eee; /* Light gray background on focus */
+    border: 1px solid #000; /* Black border on focus */
+    color: #000; /* Black text color on focus */
+}
+
+.login-form .btn-primary {
+    background-color: #000; /* Black background */
+    border: 1px solid #000; /* Black border */
+}
+
+.login-form .btn-primary:hover {
+    background-color: #444; /* Dark gray background on hover */
+    border: 1px solid #444; /* Dark gray border on hover */
+}

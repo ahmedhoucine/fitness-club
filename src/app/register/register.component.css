@@ -1,0 +1,38 @@
+
+
+body {
+    background-color: #ffc107; /* Yellow background */
+    color: #000; /* Black text color */
+}
+
+.register-container {
+    margin-top: 5%;
+}
+
+.register-form {
+    background-color: #ffc107; /* Yellow background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.register-form label {
+    color: #000; /* Black text color */
+}
+
+.register-form input[type="text"],
+.register-form input[type="number"] {
+    background-color: #fff; /* White background */
+    border: 1px solid #000; /* Black border */
+    color: #000; /* Black text color */
+}
+
+
+.register-form .btn-primary {
+    background-color: #000; /* Black background */
+    border: 1px solid #000; /* Black border */
+}
+
+
+
+
