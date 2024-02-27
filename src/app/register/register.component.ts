@@ -18,6 +18,7 @@ export class RegisterComponent {
     const link = ['login'];
     this.router.navigate(link);
     
+    
   }
 
 }
