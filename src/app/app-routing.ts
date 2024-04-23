@@ -1,18 +1,18 @@
 import { RouterModule, Routes } from "@angular/router";
-import { HomeComponent } from "./home/home.component";
-import { LoginComponent } from "./app/login/login.component";
-import { SportsComponent } from "./sports/sports.component";
+import { ItemsComponent } from "./items/items.component";
+import { CategoriesComponent } from "./categories/categories.component";
+import { AddCategoryComponent } from "./add-category/add-category.component";
+import { AddItemComponent } from "./add-item/add-item.component";
+import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
-import { BodybuildingComponent } from "./bodybuilding/bodybuilding.component";
 
 const APP_ROUTING : Routes=[
-    {path: '', component: HomeComponent},
-    {path: 'home', component: HomeComponent},
-    {path: 'sports', component: SportsComponent},
-    {path: 'sports/bodybuilding', component: BodybuildingComponent},
+    {path: 'items', component: ItemsComponent},
+    {path: 'categories', component: CategoriesComponent},
+    {path: 'add_item', component: AddItemComponent},
+    {path: 'add_category', component: AddCategoryComponent},
+    {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
-    {path: 'login', component: LoginComponent}
-
 ];
 
 export const ROUTING = RouterModule.forRoot(APP_ROUTING); 
